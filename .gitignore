@@ -1,0 +1,7 @@
+BFDetectorMain
+BFDictBuilderMain_dump
+BFDictBuilderMain_no_dump
+BFInserterMain
+*.so
+*dict_info*
+*output*

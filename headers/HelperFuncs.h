@@ -25,7 +25,7 @@ void initBFNameMap() { // initialize bfNameMap
   string commonBounds[] = {"Bound", "BoundInverted", "BoundWrapped", "VECT3_BOUND_CUBE", "VECT3_BOUND_BOX", "EULERS_BOUND_CUBE", "RATES_BOUND_CUBE", "RATES_BOUND_BOX", "Clip"};
   string absBounds[] = {"BoundAbs", "RATES_BOUND_BOX_ABS", "DeadBand", "ClipAbs"};
   string upBounds[] = {"BoundUpper"};
-  string noBounds[] = {"FLOAT_ANGLE_NORMALIZE"};
+  string noBounds[] = {"FLOAT_ANGLE_NORMALIZE", "INT32_ANGLE_NORMALIZE", "INT32_COURSE_NORMALIZE"};
   string splBounds[] = {"SATURATE_SPEED_TRIM_ACCEL"};
 
   for (string str : commonBounds) // (_x, _min, _max)
