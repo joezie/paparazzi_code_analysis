@@ -125,6 +125,7 @@ CLANG_LIBS := \
 
 .PHONY: all rmoutput clean
 all: BFDictBuilderPlugin.so BFDictBuilderPlugin_dump.so
+#all: BFDictBuilderPlugin.so
 
 BFDictBuilderPlugin.so: BFDictBuilderPlugin.cpp
 	$(CXX) $(PLUGIN_CXXFLAGS) $(CXXFLAGS) $(LLVM_CXXFLAGS) $(CLANG_INCLUDES) $^ \

@@ -27,6 +27,7 @@
  */
 
 #include "generated/airframe.h"
+#include "/home/joezie/paparazzi/sw/airborne/math/pprz_algebra.h"
 
 #include "firmwares/rotorcraft/stabilization.h"
 #include "firmwares/rotorcraft/stabilization/stabilization_rate.h"
@@ -194,9 +195,10 @@ void stabilization_rate_run(bool in_flight)
     /* update integrator */
     //divide the sum_err_increment to make sure it doesn't accumulate to the max too fast
     struct FloatRates sum_err_increment;
-    RATES_SDIV(sum_err_increment, _error, PERIODIC_FREQUENCY);
-    RATES_ADD(stabilization_rate_sum_err, sum_err_increment);
-    RATES_BOUND_CUBE(stabilization_rate_sum_err, -MAX_SUM_ERR, MAX_SUM_ERR);
+    //RATES_SDIV(sum_err_increment, _error, PERIODIC_FREQUENCY);
+    //RATES_ADD(stabilization_rate_sum_err, sum_err_increment);
+    //RATES_BOUND_CUBE(stabilization_rate_sum_err, -MAX_SUM_ERR, MAX_SUM_ERR);
+    RATES_BOUND_CUBE(*(struct GenericFloatStruct*)&stabilization_rate_sum_err, -MAX_SUM_ERR, MAX_SUM_ERR); // joezie 2019/11/19
   } else {
     FLOAT_RATES_ZERO(stabilization_rate_sum_err);
   }

@@ -226,27 +226,28 @@ private:
 	      baseExp = tmp -> getSubExpr();
 	    }
 	    if (isa<DeclRefExpr>(baseExp)) { 
-		  DeclRefExpr *declExp = cast<DeclRefExpr>(baseExp);
-		  varName = declExp -> getNameInfo().getAsString() + ". ";
+		    DeclRefExpr *declExp = cast<DeclRefExpr>(baseExp);
+		    varName = declExp -> getNameInfo().getAsString() + ". ";
 	    }
 	    else if (isa<MemberExpr>(baseExp)) { // three-level structure member
 	      MemberExpr *memExp2 = cast<MemberExpr>(baseExp);
 	      Expr *baseExp2 = memExp2 -> getBase();
 	      while (isa<ImplicitCastExpr>(baseExp2)) { // perform implicit cast
-                ImplicitCastExpr *tmp = cast<ImplicitCastExpr>(baseExp2);
+          ImplicitCastExpr *tmp = cast<ImplicitCastExpr>(baseExp2);
 	        baseExp2 = tmp -> getSubExpr();
 	      }
 	      if (isa<DeclRefExpr>(baseExp2)) { 
-		  DeclRefExpr *declExp2 = cast<DeclRefExpr>(baseExp2);
-		  varName = declExp2 -> getNameInfo().getAsString() + ". ";
+		      DeclRefExpr *declExp2 = cast<DeclRefExpr>(baseExp2);
+		      varName = declExp2 -> getNameInfo().getAsString() + ". ";
 	      }
 	      else {
-		  // TODO: maximum three-level structure member now
-		  string baseType2 = baseExp2 -> getType().getAsString();
-		  varName = "<" + baseType2 + ">. ";
+		      // TODO: maximum three-level structure member now
+		      string baseType2 = baseExp2 -> getType().getAsString();
+		      varName = "<" + baseType2 + ">. ";
 	      }
+
 	      varName += memExp2 -> getMemberNameInfo().getAsString() + ". ";
-            }
+      }
 	    else {
 		  // TODO: handle base types other than MemberExpr
 		  string baseType = baseExp -> getType().getAsString();
@@ -273,13 +274,13 @@ private:
 	        memBaseExp = tmp -> getSubExpr();
 	      }
 	      if (isa<DeclRefExpr>(memBaseExp)) { 
-		DeclRefExpr *declExp = cast<DeclRefExpr>(memBaseExp);
-		varName = declExp -> getNameInfo().getAsString() + ". ";
+		      DeclRefExpr *declExp = cast<DeclRefExpr>(memBaseExp);
+		      varName = declExp -> getNameInfo().getAsString() + ". ";
 	      }
 	      else {
-		  // TODO: handle base types other than MemberExpr
-		  string baseType = baseExp -> getType().getAsString();
-		  varName = "<" + baseType + ">. ";
+		      // TODO: handle base types other than MemberExpr
+		      string baseType = baseExp -> getType().getAsString();
+		      varName = "<" + baseType + ">. ";
 	      }
 	      varName += memExp -> getMemberNameInfo().getAsString();
 	    }
@@ -304,13 +305,69 @@ private:
 	       DeclRefExpr *declIdxExp = cast<DeclRefExpr>(idxExp);
 	       idxStr = declIdxExp -> getNameInfo().getAsString();
 	    }
-            else {
+      else {
 		  // TODO: handle index types other than IntegerLiteral or DeclRefExpr
 		  string idxType = idxExp -> getType().getAsString();
 		  varName = "<" + idxType + ">. ";
 	    }
 	    varName += "[" + idxStr + "]";
 	  }
+    else if (isa<UnaryOperator>(e)) { // unary operator statement
+      // recursively get subexpr via one of the following paths until DeclRefExpr:
+      // 1. UnaryOperator->CStyleCastExpr->ImplicitCastExpr->DeclRefExpr
+      // 2. UnaryOperator->CStyleCastExpr->UnaryOperator->DeclRefExpr
+      // 3. UnaryOperator->CStyleCastExpr->UnaryOperator->MemberExpr->ImplicitCastExpr->DeclRefExpr
+
+      UnaryOperator *unaryExp = cast<UnaryOperator>(e);
+      Expr* derefExp = unaryExp -> getSubExpr();
+      if (!isa<CStyleCastExpr>(derefExp)) {
+        return "unary exception: BV not CStyleCastExp";
+      }
+      CStyleCastExpr* castExp = cast<CStyleCastExpr>(derefExp);
+      Expr* precastExp = castExp -> getSubExpr();
+
+      if (isa<ImplicitCastExpr>(precastExp)) { // path 1
+        while (isa<ImplicitCastExpr>(precastExp)) { // perform implicit cast
+            ImplicitCastExpr *tmp = cast<ImplicitCastExpr>(precastExp);
+            precastExp = tmp -> getSubExpr();
+        }
+        if (!isa<DeclRefExpr>(precastExp)) {
+          return "unary exception: Pre-cast BV not DeclRefExpr";
+        }
+        DeclRefExpr *declExp = cast<DeclRefExpr>(precastExp);
+        varName = declExp -> getNameInfo().getAsString();
+      } else if (isa<UnaryOperator>(precastExp)) {
+        UnaryOperator* refExp = cast<UnaryOperator>(precastExp);
+        Expr* varExp = refExp -> getSubExpr();
+
+        if (isa<DeclRefExpr>(varExp)) { // path 2
+          DeclRefExpr *declExp = cast<DeclRefExpr>(varExp);
+          varName = declExp -> getNameInfo().getAsString();
+        } else if (isa<MemberExpr>(varExp)) { // path 3
+          MemberExpr *memExp = cast<MemberExpr>(varExp);
+          Expr *memBaseExp = memExp -> getBase();
+          while (isa<ImplicitCastExpr>(memBaseExp)) { // perform implicit cast
+            ImplicitCastExpr *tmp = cast<ImplicitCastExpr>(memBaseExp);
+            memBaseExp = tmp -> getSubExpr();
+          }
+          if (isa<DeclRefExpr>(memBaseExp)) { 
+            DeclRefExpr *declExp = cast<DeclRefExpr>(memBaseExp);
+            varName = declExp -> getNameInfo().getAsString() + "-> ";
+          }
+          else {
+            // TODO: handle base types other than MemberExpr
+            string baseType = memBaseExp -> getType().getAsString();
+            varName = "<" + baseType + ">-> ";
+          }
+          varName += memExp -> getMemberNameInfo().getAsString();
+        } else {
+          return "unary exception: Referenced BV not DeclRefExpr or MemberExpr";
+        }
+      } else {
+        string precastExpType = precastExp -> getType().getAsString();
+        return "unary exception: Pre-cast BV (" + precastExpType + ") not DeclRefExpr or UnaryOperator";
+      }
+    }
 
 	  return varName;
   }
