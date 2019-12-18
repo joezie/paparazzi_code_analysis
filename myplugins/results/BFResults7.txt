@@ -1,0 +1,113 @@
+/home/joezie/paparazzi/sw/airborne/modules/helicopter/swashplate_mixing.c BoundAbs swashplate_mixing. commands[i] opposite(<int>) <int> 89
+/home/joezie/paparazzi/sw/airborne/modules/helicopter/throttle_curve.c Bound curve_p <int> <int> 141
+/home/joezie/paparazzi/sw/airborne/modules/helicopter/throttle_curve.c Bound rpm_diff <int> <int> 156
+/home/joezie/paparazzi/sw/airborne/modules/helicopter/throttle_curve.c Bound trimmed_throttle <int> <int> 165
+/home/joezie/paparazzi/sw/airborne/modules/helicopter/throttle_curve.c Bound trimmed_collective <int> <int> 169
+/home/joezie/paparazzi/sw/airborne/modules/helicopter/throttle_curve.c Bound throttle_curve. rpm_err_sum <int> <int> 179
+/home/joezie/paparazzi/sw/airborne/modules/helicopter/throttle_curve.c Bound rpm_feedback <int> <int> 183
+/home/joezie/paparazzi/sw/airborne/modules/helicopter/throttle_curve.c Bound new_throttle <int> <int> 187
+/home/joezie/paparazzi/sw/airborne/modules/obstacle_avoidance/obstacle_avoidance.c FLOAT_ANGLE_NORMALIZE heading_goal_ref -pi pi 443
+/home/joezie/paparazzi/sw/airborne/modules/obstacle_avoidance/obstacle_avoidance.c FLOAT_ANGLE_NORMALIZE heading_goal_ref -pi pi 544
+/home/joezie/paparazzi/sw/airborne/modules/obstacle_avoidance/obstacle_avoidance.c FLOAT_ANGLE_NORMALIZE new_heading -pi pi 585
+/home/joezie/paparazzi/sw/airborne/modules/multi/potential.c Bound cruise <double> <double> 118
+/home/joezie/paparazzi/sw/airborne/modules/computer_vision/bebop_ae_awb.c Bound dt <float> <float> 178
+/home/joezie/paparazzi/sw/airborne/modules/computer_vision/bebop_ae_awb.c Bound adjustment <float> <float> 255
+/home/joezie/paparazzi/sw/airborne/modules/computer_vision/lib/vision/image.c BoundUpper x NULL <uint32_t> 469
+/home/joezie/paparazzi/sw/airborne/modules/computer_vision/lib/vision/image.c BoundUpper y NULL <uint32_t> 470
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/optical_flow_landing.c Bound of_landing_ctrl. lp_const <float> <float> 205
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/optical_flow_landing.c Bound of_landing_ctrl. lp_const <float> <float> 299
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/optical_flow_landing.c Bound lp_factor <float> <float> 301
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/optical_flow_landing.c Bound thrust_set <double> <int> 492
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/optical_flow_landing.c Bound thrust <double> <double> 507
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/optical_flow_landing.c Bound thrust <double> <int> 570
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/optical_flow_landing.c Bound lp_factor <float> <float> 586
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/object_tracking.c FLOAT_ANGLE_NORMALIZE diff -pi pi 112
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/object_tracking.c BoundAbs diff opposite(<float>) <float> 113
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/vertical_ctrl_module_demo.c Bound thrust <int> <int> 82
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/optical_flow_functions.c Bound lp_factor <float> <float> 136
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/optical_flow_functions.c Bound des_angle <float> <float> 149
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/optical_flow_functions.c Bound lp_factor <float> <float> 164
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/optical_flow_functions.c Bound thrust <double> <int> 179
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/optical_flow_hover.c Bound lp_factor <float> <float> 448
+/home/joezie/paparazzi/sw/airborne/modules/ctrl/optical_flow_hover.c Bound lp_factor <float> <float> 541
+/home/joezie/paparazzi/sw/airborne/modules/vehicle_interface/vi_datalink.c BoundAbs heading_rate opposite(<int16_t>) <int16_t> 50
+/home/joezie/paparazzi/sw/airborne/modules/nav/nav_gls.c Bound wind_on_final <double> <double> 104
+/home/joezie/paparazzi/sw/airborne/modules/nav/nav_gls.c Bound app_distance_af_sd <int> <int> 150
+/home/joezie/paparazzi/sw/airborne/modules/nav/nav_gls.c Bound nav_final_progress <int> <int> 181
+/home/joezie/paparazzi/sw/airborne/modules/nav/nav_gls.c Bound nav_intercept_progress <int> <int> 196
+/home/joezie/paparazzi/sw/airborne/modules/nav/nav_smooth.c Bound ground_speeds[i] <double> <double> 174
+/home/joezie/paparazzi/sw/airborne/subsystems/actuators/motor_mixing.c Bound yaw_authority <int> <int> 230
+/home/joezie/paparazzi/sw/airborne/subsystems/actuators/motor_mixing.c BoundAbs bounded_yaw_cmd opposite(<int32_t>) <int32_t> 232
+/home/joezie/paparazzi/sw/airborne/subsystems/actuators/motor_mixing.c BoundAbs saturation_offset opposite(<int>) <int> 262
+/home/joezie/paparazzi/sw/airborne/subsystems/actuators/motor_mixing.c BoundAbs saturation_offset opposite(<int>) <int> 267
+/home/joezie/paparazzi/sw/airborne/subsystems/navigation/common_nav.c BoundAbs dx opposite(<float>) <float> 134
+/home/joezie/paparazzi/sw/airborne/subsystems/navigation/common_nav.c BoundAbs dy opposite(<float>) <float> 135
+/home/joezie/paparazzi/sw/airborne/subsystems/radio_control/rc_datalink.c Bound out[3] <int> <int> 84
+/home/joezie/paparazzi/sw/airborne/subsystems/radio_control/superbitrf_rc.c Bound out[i] <int> <int> 46
+/home/joezie/paparazzi/sw/airborne/subsystems/ahrs/ahrs_float_dcm.c Clip  <int> <int> 382
+/home/joezie/paparazzi/sw/airborne/subsystems/ahrs/ahrs_float_cmpl.c Bound ahrs_fc. weight <double> <double> 253
+/home/joezie/paparazzi/sw/airborne/subsystems/ahrs/ahrs_float_cmpl.c FLOAT_ANGLE_NORMALIZE heading -pi pi 434
+/home/joezie/paparazzi/sw/airborne/subsystems/ahrs/ahrs_float_cmpl.c FLOAT_ANGLE_NORMALIZE heading -pi pi 477
+/home/joezie/paparazzi/sw/airborne/subsystems/ahrs/ahrs_int_cmpl_quat.c Bound ahrs_icq. weight <double> <double> 323
+/home/joezie/paparazzi/sw/airborne/subsystems/ahrs/ahrs_int_cmpl_quat.c Bound inv_rate_scale <int> <int> 347
+/home/joezie/paparazzi/sw/airborne/subsystems/ahrs/ahrs_int_cmpl_quat.c Bound inv_bias_gain <int> <int> 374
+/home/joezie/paparazzi/sw/airborne/boards/bebop/mt9f002.c Bound fine_integration <uint16_t> <uint16_t> 714
+/home/joezie/paparazzi/sw/airborne/boards/bebop/mt9f002.c Bound coarse_integration <uint16_t> <uint16_t> 715
+/home/joezie/paparazzi/sw/airborne/boards/bebop/mt9f002.c Bound analog_gain2 <int> <int> 764
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/navigation.c Bound nav_leg_progress <int> <int32_t> 599
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_h.c DeadBand rc_x opposite(<int>) <int> 645
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_h.c DeadBand rc_y opposite(<int>) <int> 646
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_h_ref.c Bound gh_ref. tau <float> <float> 84
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_h_ref.c Bound gh_ref. omega <float> <float> 92
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_h_ref.c Bound gh_ref. zeta <float> <float> 101
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_v.c DeadBand guidance_v_rc_zd_sp opposite(<int>) <int> 213
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_v.c Bound err_z <int> <int> 420
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_v.c Bound err_zd <int> <int> 422
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_v.c Bound guidance_v_z_sum_err <int> <int> 426
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_v.c Bound guidance_v_ff_cmd <int> <int> 453
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_v.c Bound guidance_v_delta_t <int> <int> 465
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_v.c Bound guidance_v_th_sp <int> <int> 592
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_v_ref.c Bound gv_zdd_ref <int> <int> 112
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_v_ref.c Bound gv_z_ref <long long> <long long> 137
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_v_ref.c Bound gv_zdd_ref <int> <int> 144
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_v_adapt.c Bound gv_adapt_X <const int32_t> <const int32_t> 190
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/guidance/guidance_hybrid.c FLOAT_ANGLE_NORMALIZE heading_diff -pi pi 162
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_attitude_quat_float.c BoundAbs stabilization_cmd[1] opposite(<int>) <int> 356
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_attitude_quat_float.c BoundAbs stabilization_cmd[2] opposite(<int>) <int> 357
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_indi_simple.c BoundAbs rate_ref_r opposite(<float>) <float> 325
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_rate.c BoundAbs stabilization_cmd[1] opposite(<int>) <int> 219
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_rate.c BoundAbs stabilization_cmd[2] opposite(<int>) <int> 220
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_attitude_euler_int.c BoundAbs stabilization_cmd[1] opposite(<int>) <int> 281
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_attitude_euler_int.c BoundAbs stabilization_cmd[2] opposite(<int>) <int> 282
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_attitude_euler_float.c BoundAbs stabilization_cmd[1] opposite(<int>) <int> 242
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_attitude_euler_float.c BoundAbs stabilization_cmd[2] opposite(<int>) <int> 243
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_attitude_quat_int.c BoundAbs stabilization_cmd[1] opposite(<int>) <int> 289
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_attitude_quat_int.c BoundAbs stabilization_cmd[2] opposite(<int>) <int> 290
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_indi.c BoundAbs indi_u[i] opposite(<int>) <int> 433
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_indi.c Bound indi_u[i] <int> <int> 435
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_attitude_ref_euler_int.c RATES_BOUND_BOX ref. accel <const struct Int32Rates> <const struct Int32Rates> 135
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_attitude_ref_euler_float.c FLOAT_ANGLE_NORMALIZE ref. euler. psi -pi pi 76
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_attitude_ref_euler_float.c FLOAT_ANGLE_NORMALIZE ref_err. psi -pi pi 87
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_attitude_rc_setpoint.c Bound dt <int> <double> 186
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_attitude_rc_setpoint.c Bound dt <int> <double> 265
+/home/joezie/paparazzi/sw/airborne/firmwares/rotorcraft/stabilization/stabilization_attitude_rc_setpoint.c FLOAT_ANGLE_NORMALIZE care_free_delta_psi_f -pi pi 308
+/home/joezie/paparazzi/sw/airborne/firmwares/rover/guidance/rover_guidance.c BoundAbs rover_guidance. speed_pid. err opposite(<float>) <float> 89
+/home/joezie/paparazzi/sw/airborne/firmwares/rover/guidance/rover_guidance.c BoundAbs rover_guidance. speed_pid. d_err opposite(<float>) <float> 95
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/nav.c BoundAbs diff opposite(<double>) <double> 369
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.c BoundAbs v_ctl_climb_setpoint opposite(<float>) <float> 325
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.c BoundAbs v_ctl_auto_throttle_sum_err opposite(<int>) <int> 462
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.c BoundAbs diff_throttle opposite(<int>) <int> 556
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/guidance/energy_ctrl.c BoundAbs sp opposite(<float>) <float> 308
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/guidance/energy_ctrl.c BoundAbs incr opposite(<float>) <float> 312
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/guidance/energy_ctrl.c BoundAbs airspeed_incr opposite(<float>) <float> 341
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/guidance/energy_ctrl.c BoundAbs v_ctl_desired_acceleration opposite(<float>) <float> 368
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/guidance/energy_ctrl.c Bound v_ctl_auto_throttle_nominal_cruise_throttle <float> <float> 400
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/guidance/energy_ctrl.c BoundAbs diff_throttle opposite(<int>) <int> 455
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v_n.c BoundAbs diff_climb opposite(<double>) <double> 245
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v_n.c BoundAbs v_ctl_auto_pitch_sum_err opposite(<float>) <float> 268
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v_n.c BoundAbs v_ctl_auto_throttle_sum_err opposite(<double>) <double> 296
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v_n.c BoundAbs diff_throttle opposite(<int>) <int> 434
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.c Bound speed_depend_nav <double> <double> 286
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.c BoundAbs h_ctl_roll_setpoint opposite(<float>) <float> 323
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_adaptive.c Bound speed_depend_nav <double> <double> 387
+/home/joezie/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_adaptive.c BoundAbs h_ctl_roll_setpoint opposite(<float>) <float> 393

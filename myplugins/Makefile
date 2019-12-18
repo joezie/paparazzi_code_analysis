@@ -124,8 +124,12 @@ CLANG_LIBS := \
 	-Wl,--end-group
 
 .PHONY: all rmoutput clean
-all: BFDictBuilderPlugin.so BFDictBuilderPlugin_dump.so
+all: BFDictBuilderPlugin.so
 #all: BFDictBuilderPlugin.so
+
+dump_version: BFDictBuilderPlugin_dump.so
+
+px4_version: BFDictBuilderPlugin_PX4.so
 
 BFDictBuilderPlugin.so: BFDictBuilderPlugin.cpp
 	$(CXX) $(PLUGIN_CXXFLAGS) $(CXXFLAGS) $(LLVM_CXXFLAGS) $(CLANG_INCLUDES) $^ \
@@ -134,6 +138,10 @@ BFDictBuilderPlugin.so: BFDictBuilderPlugin.cpp
 BFDictBuilderPlugin_dump.so: BFDictBuilderPlugin.cpp
 	$(CXX) $(PLUGIN_CXXFLAGS) $(CXXFLAGS) $(LLVM_CXXFLAGS) $(CLANG_INCLUDES) $^ \
 		$(PLUGIN_LDFLAGS) $(LLVM_LDFLAGS_NOLIBS) -DDUMP -o $@
+
+BFDictBuilderPlugin_PX4.so: BFDictBuilderPlugin_PX4.cpp
+	$(CXX) $(PLUGIN_CXXFLAGS) $(CXXFLAGS) $(LLVM_CXXFLAGS) $(CLANG_INCLUDES) $^ \
+		$(PLUGIN_LDFLAGS) $(LLVM_LDFLAGS_NOLIBS) -o $@
 
 .PHONY: clean format
 
