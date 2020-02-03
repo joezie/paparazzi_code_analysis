@@ -157,7 +157,20 @@ public:
         writeToFile << "Error: argument number of " << bfName << " should be 1 instead of " << argNum << endl;
         return true;
 	    }
-      BFDict newEntry(srcFile, bfName, bvStr, "-pi", "pi", (int)startLine);
+      string lbName = "", ubName = "";
+      if (bfName == "FLOAT_ANGLE_NORMALIZE" || bfName == "INT32_ANGLE_NORMALIZE" ||
+          bfName == "NormRadAngle") {
+        lbName = "-pi";
+        ubName = "pi";
+      } else if (bfName == "INT32_COURSE_NORMALIZE") {
+        lbName = "0";
+        ubName = "2*pi";
+      } else {
+        lbName = "Invallid noBound Type Bounding Function";
+        upName = lbName;
+      }
+
+      BFDict newEntry(srcFile, bfName, bvStr, lbName, ubName, (int)startLine);
       bvSet.insert(bvStr);
       dict.push_back(newEntry);
       entry_op = newEntry;

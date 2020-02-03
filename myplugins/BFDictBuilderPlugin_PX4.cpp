@@ -157,7 +157,15 @@ public:
         writeToFile << "Error: argument number of " << bfName << " should be 1 instead of " << argNum << endl;
         return true;
 	    }
-      BFDict newEntry(srcFile, bfName, bvStr, "-pi", "pi", (int)startLine);
+      string lbName = "", ubName = "";
+      if (bfName == "constrainFloatToInt16") {
+        lbName = "-32768";
+        ubName = "32767";
+      } else {
+        lbName = "Invallid noBound Type Bounding Function";
+        upName = lbName;
+      }
+      BFDict newEntry(srcFile, bfName, bvStr, lbName, ubName, (int)startLine);
       bvSet.insert(bvStr);
       dict.push_back(newEntry);
       entry_op = newEntry;
