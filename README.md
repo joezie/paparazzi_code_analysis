@@ -24,6 +24,10 @@
 
 * BFDictBuilderMain_cmd.sh: script for executing BFDictBuilderMain against a source file to build bounding function dictionary
 
+* BFDictBuilderPlugin_batch.sh: script for applying BFDictBuilderPlugin to the whole code base one by one to build bounding function dictionary
+
+* BFDictBuilderPlugin_cmd.sh: script for applying BFDictBuilderPlugin to a source file to build bounding function dictionary
+
 * BFDetectorMain_cmd.sh: a sample script for executing BFDetectorMain
 
 * BFInserterMain_cmd.sh: a sample script for executing BFInserterMain
