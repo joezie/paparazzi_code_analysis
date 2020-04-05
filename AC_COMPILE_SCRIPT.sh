@@ -1,6 +1,6 @@
 TARGET_AP_LIST="Bixler Bumblebee_Quad Hexa_LisaL LadyLisa MentorEnergy Minion_Lia Quad_Elle0 Quad_LisaMX Quad_LisaM_2 Quad_Navstik ardrone2 bebop2 bebop2_opticflow krooz_quad quadshot Twinstar_energyadaptive Microjet Umarim_Lite"
 
-#TARGET_AP_LIST="Twinstar_energyadaptive"
+#TARGET_AP_LIST="Bixler" # this is for single target test
 
 TARGET_SIM_LIST="Microjet Twinstar_energyadaptive Umarim_Lite Bixler MentorEnergy"
 

@@ -167,7 +167,7 @@ public:
         ubName = "2*pi";
       } else {
         lbName = "Invallid noBound Type Bounding Function";
-        upName = lbName;
+        ubName = lbName;
       }
 
       BFDict newEntry(srcFile, bfName, bvStr, lbName, ubName, (int)startLine);
